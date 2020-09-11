@@ -1,0 +1,100 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
+
+/* purgecss start ignore */
+
+.post h1 {
+    @apply text-3xl;
+    @apply leading-8;
+    @apply font-extrabold;
+    @apply tracking-tight;
+    @apply text-gray-800;
+    @apply my-8;
+}
+
+.post h2 {
+    @apply text-2xl;
+    @apply leading-8;
+    @apply font-extrabold;
+    @apply tracking-tight;
+    @apply text-gray-800;
+    @apply mt-6;
+    @apply mb-3;
+}
+
+.post h3 {
+    @apply text-xl;
+    @apply leading-8;
+    @apply font-extrabold;
+    @apply tracking-tight;
+    @apply text-gray-800;
+    @apply my-3;
+}
+
+.post p {
+    @apply mb-4;
+}
+
+.post ul {
+
+}
+
+.post a {
+    @apply underline;
+}
+
+.post nav a {
+    @apply no-underline;
+}
+
+.post img {
+    @apply shadow;
+    @apply rounded;
+    @apply mb-4;
+}
+
+.post pre {
+    @apply shadow-sm;
+    @apply text-white;
+    @apply text-sm;
+    @apply font-mono;
+    @apply subpixel-antialiased;
+    @apply bg-gray-800;
+    @apply py-2;
+    @apply px-3;
+    @apply rounded;
+    @apply leading-normal;
+    @apply overflow-hidden;
+    @apply mb-4;
+}
+
+.post table {
+    @apply text-left;
+    @apply bg-white;
+    @apply shadow;
+    @apply rounded;
+    @apply mb-4;
+}
+
+.post td {
+    @apply py-2;
+    @apply px-3;
+    @apply border-b;
+    @apply border-gray-300;
+}
+
+.post th {
+    @apply py-2;
+    @apply px-3;
+    @apply bg-gray-100;
+    @apply font-bold;
+    @apply uppercase;
+    @apply text-sm;
+    @apply text-gray-800;
+    @apply border-b;
+    @apply border-gray-300;
+}
+/* purgecss end ignore */

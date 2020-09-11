@@ -1,0 +1,51 @@
+{
+  "name": "baseline-blog",
+  "version": "0.0.2",
+  "description": "Blog for https://baseline.dev",
+  "main": "index.js",
+  "scripts": {
+    "serve": "serve build -l 5001",
+    "build": "rm -rf build && npm run build:assets && NODE_ENV=production npm run build:css && NODE_ENV=production npm run build:blog",
+    "build:assets": "mkdir -p ./build/assets && cp -r ./src/assets ./build",
+    "build:css": "postcss ./src/static/css/style.css -c postcss.config.js -o build/static/css/layout.css",
+    "build:sitemap": "node -r esm ./lib/sitemap.js",
+    "build:blog": "node -r esm index.js && cp ./src/static/sitemap.xml ./build",
+    "cdk:deploy": "npx cdk deploy --profile 366378881925_AdministratorAccess",
+    "cdk:destroy": "npx cdk destroy --profile 366378881925_AdministratorAccess"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baseline-dev/blog.git"
+  },
+  "author": "Nikolai Onken",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/baseline-dev/blog/issues"
+  },
+  "homepage": "https://blog.baseline.dev",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "gray-matter": "^4.0.2",
+    "lodash.merge": "^4.6.2",
+    "mdast-excerpt": "0.0.4",
+    "nunjucks": "^3.2.2",
+    "reading-time": "^1.2.0",
+    "recursive-readdir": "^2.2.2",
+    "remark": "^12.0.1",
+    "remark-html": "^12.0.0",
+    "slug": "^2.1.1"
+  },
+  "devDependencies": {
+    "@aws-cdk/aws-codepipeline": "^1.62.0",
+    "@aws-cdk/aws-s3-deployment": "^1.62.0",
+    "@aws-cdk/core": "^1.62.0",
+    "@aws-cdk/pipelines": "^1.62.0",
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "@tailwindcss/ui": "^0.1.4",
+    "postcss-cli": "^7.1.2",
+    "postcss-import": "^12.0.1",
+    "serve": "^11.3.2",
+    "sitemap-generator": "^8.5.0",
+    "tailwindcss": "^1.8.6"
+  }
+}
