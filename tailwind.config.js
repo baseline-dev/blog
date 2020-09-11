@@ -1,4 +1,11 @@
 module.exports = {
+  purge: {
+    content: [
+      './templates/**/*.njk',
+      './templates/**/*.html',
+      './src/**/*.md'
+    ]
+  },
   plugins: [
     require('@tailwindcss/ui')({
       layout: 'sidebar',
