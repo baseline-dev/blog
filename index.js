@@ -10,7 +10,7 @@ import excerptAst from 'mdast-excerpt';
 
 const CONFIG = {
   production: {
-    docsUrl: 'https://docs.baseline.dev'
+    docsUrl: 'https://blog.baseline.dev'
   },
   development: {
     docsUrl: 'http://localhost:5001'
