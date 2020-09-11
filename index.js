@@ -111,7 +111,6 @@ async function posts(baseline) {
   for (const file in baseline.ctx) {
     const props = baseline.ctx[file]; 
     if (props.data.layout === 'post.njk') {
-      console.log(props)
       posts.push({
         title: props.data.title,
         cover: props.data.cover,
